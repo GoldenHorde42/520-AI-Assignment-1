@@ -1,6 +1,6 @@
 from array import *
 import numpy as np
-
+import matplotlib.pyplot as plt
 class Maze:
     
     
@@ -53,9 +53,22 @@ class Maze:
                 self.stack.append([adjx, adjy])
     
     def visualize_maze(self):
+        m = 0
+        n = 0
+        for i in range(self.rows):
+            for j in range(self.columns):
+                print(self.maze[i][j], end = " ")
+                if self.maze[i][j] == 1:
+                    m+=1
+                else:
+                    n+=1
 
-        print(self.maze)
-        print(self.visited)
+            print("\n")
+        print(m/(m+n))
+        plt.imshow(self.maze,cmap='gray_r')
+        plt.show()
+        #print(self.maze)
+        #print(self.visited)
 
 if __name__ == "__main__":
     maze1 = Maze(50,50)
