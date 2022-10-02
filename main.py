@@ -1,6 +1,7 @@
 from array import *
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 class Maze:
     
     
@@ -8,6 +9,7 @@ class Maze:
  
         self.rows = rows
         self.columns = columns
+        self.steps = 0
         self.dRow = [0, 1, 0, -1]
         self.dCol = [-1, 0, 1, 0]
     def validity(self, r, c):
@@ -20,6 +22,8 @@ class Maze:
         
         if (self.visited[r][c]): #already visited
             return 0
+        if (self.maze[r][c] == 2): #cell part of dfs path
+            return 1
         if (self.maze[r][c]): #cell blocked
             return 0
         return 1
@@ -33,6 +37,7 @@ class Maze:
         self.visited = [[0] * self.rows for i in range(self.columns)]
         self.stack = []
         self.stack.append([0,0])
+        
         while (len(self.stack) > 0):
             current = self.stack[len(self.stack) - 1]
             self.stack.remove(self.stack[len(self.stack) - 1])
@@ -42,16 +47,70 @@ class Maze:
             if (self.validity(r,c) == 0):
                 continue
             self.visited[r][c] = 1
-            blocked = np.random.choice(np.arange(0, 2), p=[0.7,0.3])
+            blocked = np.random.choice(np.arange(0, 2), p=[0.70,0.30])
             if (r == 0 and c == 0):
                 self.maze[r][c]  = 0
+            elif (r == 0 and c == 1):
+                self.maze[r][c]  = 0
+            elif (r == 1 and c == 0):
+                self.maze[r][c]  = 0
+            elif (r == self.rows - 1 and c == self.columns - 1):
+                self.maze[r][c] = 0
+            
             else:
                 self.maze[r][c] = blocked
             for i in range(4):
-                adjx = r + self.dRow[i]
-                adjy = c + self.dCol[i]
-                self.stack.append([adjx, adjy])
-    
+                neighbour_x = r + self.dRow[i]
+                neighbour_y = c + self.dCol[i]
+                self.stack.append([neighbour_x, neighbour_y])
+    def dfsolver(self):
+
+        self.visited = [[0] * self.rows for i in range(self.columns)]
+        self.stack = []
+        self.stack.append([0,0])
+        while (len(self.stack) > 0):
+            current = self.stack[len(self.stack) - 1]
+            self.stack.remove(self.stack[len(self.stack) - 1])
+            r = current[0]
+            c = current[1]
+
+            if (self.validity(r,c) == 0):
+                continue
+            self.visited[r][c] = 1
+            self.maze[r][c] = 2
+            self.steps+=1
+            print(r,c)
+            if (r == self.rows - 1 and c == self.columns - 1):
+                print("Reached the goal in", self.steps , "steps")
+                break
+            for i in range(4):
+                neighbour_x = r + self.dRow[i]
+                neighbour_y = c + self.dCol[i]
+                self.stack.append([neighbour_x, neighbour_y])
+    def bfsolver(self):
+
+        self.visited = [[0] * self.rows for i in range(self.columns)]
+        self.stack = []
+        self.stack.append([0,0])
+        while (len(self.stack) > 0):
+            current = self.stack[0]
+            self.stack.pop(0)
+            r = current[0]
+            c = current[1]
+
+            if (self.validity(r,c) == 0):
+                continue
+            self.visited[r][c] = 1
+            self.maze[r][c] = 2
+            self.steps+=1
+            print(r,c)
+            if (r == self.rows - 1 and c == self.columns - 1):
+                print("Reached the goal in", self.steps , "steps")
+                break
+            for i in range(4):
+                neighbour_x = r + self.dRow[i]
+                neighbour_y = c + self.dCol[i]
+                self.stack.append([neighbour_x, neighbour_y])
     def visualize_maze(self):
         m = 0
         n = 0
@@ -74,3 +133,8 @@ if __name__ == "__main__":
     maze1 = Maze(50,50)
     maze1.generate_maze()
     maze1.visualize_maze()
+    maze3 = maze2 = maze1
+    maze2.dfsolver()
+    maze2.visualize_maze()
+    maze3.bfsolver()
+    maze3.visualize_maze()
