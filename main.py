@@ -1,7 +1,31 @@
 from array import *
+from re import S
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+from queue import PriorityQueue
+class Cell:
+
+    def __init__(self, coordinates=None, parentCell=None):
+        
+        self.gval = 0
+        self.hval = 0
+        self.fval = 0
+
+        self.parentCell = parentCell
+        self.coordinates = coordinates
+    
+    def __eq__(self,other):
+        if (self.coordinates == other.coordinates):
+            return 1
+        return 0
+
+    def __lt__(self,other):
+        if (self.fval == other.fval):
+            return 1
+        return 0
+
+
 class Maze:
     
     
@@ -128,6 +152,68 @@ class Maze:
         plt.show()
         #print(self.maze)
         #print(self.visited)
+
+def AstarSearch(start, goal, maze : Maze):
+
+    startCell = Cell(start, None)
+    goalCell = Cell(goal, None)
+
+    #initialize all values as 0 for start and end nodes
+
+    startCell.gval = startCell.hval = startCell.fval = 0
+    goalCell.gval = goalCell.hval = goalCell.fval = 0
+    
+    #create a priority queue for the open list
+
+    openList = PriorityQueue()
+    closedList = []
+    openList.put(startCell)
+    
+    AdjacentRowIndex = [0, 1, 0, -1]
+    AdjacentColumnIndex = [-1, 0, 1, 0]
+
+    while(openList):
+        currentCell = openList.get()
+        if currentCell == goalCell:
+            return "Path Found" #A function to return the actual path
+        
+        closedList.append(currentCell)
+
+        neighbourCells = [] #To explore the neighbours of the current cell
+        for i in range(4):
+            neighbour_x = currentCell.coordinates[0] + AdjacentRowIndex[i]
+            neighbour_y = currentCell.coordinates[0] + AdjacentColumnIndex[i]
+            if not maze.validity(neighbour_x,neighbour_y):
+                continue
+            neighbourCords = (neighbour_x,neighbour_y)
+            neighbour = Cell(neighbourCords,currentCell)
+            neighbourCells.append(neighbour)
+        for neighbour in neighbourCells:
+            visited = 0
+            weakerNeighbour = 0
+            for visitedNeighbour in closedList:
+                if visitedNeighbour == neighbour:
+                    visited = 1
+                    break
+            if visited:
+                continue
+
+            neighbour.gval = currentCell.gval + 1
+            neighbour.hval = (goalCell.coordinates[0] - currentCell.coordinates[0]) + (goalCell.coordinates[1] - currentCell.coordinates[1])
+            neighbour.fval = neighbour.gval + neighbour.hval
+
+            for openNeighbour in openList:
+                if neighbour.coordinates == openNeighbour.coordinates and neighbour.gval >= openNeighbour.coordinates:
+                    weakerNeighbour = 1
+                    break
+            if weakerNeighbour:
+                continue
+            openList.put(neighbour)
+            
+
+    
+
+
 
 if __name__ == "__main__":
     maze1 = Maze(50,50)
