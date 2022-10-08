@@ -21,7 +21,7 @@ class Cell:
         return 0
 
     def __lt__(self,other):
-        if (self.fval == other.fval):
+        if (self.fval < other.fval):
             return 1
         return 0
 
@@ -36,19 +36,25 @@ class Maze:
         self.steps = 0
         self.dRow = [0, 1, 0, -1]
         self.dCol = [-1, 0, 1, 0]
+        self.visited = [[0] * self.rows for i in range(self.columns)]
     def validity(self, r, c):
         
         if (r < 0 or r >= self.rows): #row bounds
+           
             return 0
 
         if (c < 0 or c >= self.columns): #column bounds
+            
             return 0
         
         if (self.visited[r][c]): #already visited
+            
             return 0
         if (self.maze[r][c] == 2): #cell part of dfs path
+            
             return 1
         if (self.maze[r][c]): #cell blocked
+            
             return 0
         return 1
 
@@ -87,6 +93,10 @@ class Maze:
                 neighbour_x = r + self.dRow[i]
                 neighbour_y = c + self.dCol[i]
                 self.stack.append([neighbour_x, neighbour_y])
+    def generateAgentMaze(self):
+        self.maze = [[0] * self.rows for i in range(self.columns)]
+    def clearVisitedArray(self):
+        self.visited = [[0] * self.rows for i in range(self.columns)]
     def dfsolver(self):
 
         self.visited = [[0] * self.rows for i in range(self.columns)]
@@ -152,7 +162,13 @@ class Maze:
         plt.show()
         #print(self.maze)
         #print(self.visited)
-
+def tracePath(cell : Cell, maze : Maze):
+    pathTaken = []
+    while cell is not None:
+        pathTaken.append(cell.coordinates)
+        maze.maze[cell.coordinates[0]][cell.coordinates[1]] = 2
+        cell = cell.parentCell
+    return pathTaken
 def AstarSearch(start, goal, maze : Maze):
 
     startCell = Cell(start, None)
@@ -162,7 +178,7 @@ def AstarSearch(start, goal, maze : Maze):
 
     startCell.gval = startCell.hval = startCell.fval = 0
     goalCell.gval = goalCell.hval = goalCell.fval = 0
-    
+    print(startCell.coordinates, goalCell.coordinates)
     #create a priority queue for the open list
 
     openList = PriorityQueue()
@@ -172,21 +188,24 @@ def AstarSearch(start, goal, maze : Maze):
     AdjacentRowIndex = [0, 1, 0, -1]
     AdjacentColumnIndex = [-1, 0, 1, 0]
 
-    while(openList):
+    while(not openList.empty()):
         currentCell = openList.get()
+        print(currentCell.coordinates)
         if currentCell == goalCell:
-            return "Path Found" #A function to return the actual path
-        
+            return tracePath(currentCell,maze) #A function to return the actual path
+        #print("here1")
         closedList.append(currentCell)
 
         neighbourCells = [] #To explore the neighbours of the current cell
         for i in range(4):
             neighbour_x = currentCell.coordinates[0] + AdjacentRowIndex[i]
-            neighbour_y = currentCell.coordinates[0] + AdjacentColumnIndex[i]
+            neighbour_y = currentCell.coordinates[1] + AdjacentColumnIndex[i]
             if not maze.validity(neighbour_x,neighbour_y):
+                print("oops")
                 continue
             neighbourCords = (neighbour_x,neighbour_y)
             neighbour = Cell(neighbourCords,currentCell)
+            print(neighbour.coordinates)
             neighbourCells.append(neighbour)
         for neighbour in neighbourCells:
             visited = 0
@@ -199,17 +218,16 @@ def AstarSearch(start, goal, maze : Maze):
                 continue
 
             neighbour.gval = currentCell.gval + 1
-            neighbour.hval = (goalCell.coordinates[0] - currentCell.coordinates[0]) + (goalCell.coordinates[1] - currentCell.coordinates[1])
+            neighbour.hval = abs(goalCell.coordinates[0] - neighbour.coordinates[0]) + abs(goalCell.coordinates[1] - neighbour.coordinates[1])
             neighbour.fval = neighbour.gval + neighbour.hval
-
-            for openNeighbour in openList:
-                if neighbour.coordinates == openNeighbour.coordinates and neighbour.gval >= openNeighbour.coordinates:
+            for openNeighbour in openList.queue:
+                if neighbour.coordinates == openNeighbour.coordinates and neighbour.gval >= openNeighbour.gval:
                     weakerNeighbour = 1
                     break
             if weakerNeighbour:
                 continue
             openList.put(neighbour)
-            
+    return tracePath(currentCell,maze)       
 
     
 
@@ -219,8 +237,19 @@ if __name__ == "__main__":
     maze1 = Maze(50,50)
     maze1.generate_maze()
     maze1.visualize_maze()
-    maze3 = maze2 = maze1
-    maze2.dfsolver()
-    maze2.visualize_maze()
-    maze3.bfsolver()
-    maze3.visualize_maze()
+    maze1.clearVisitedArray()
+    # maze3 = maze2 = maze1
+    # maze2.dfsolver()
+    # maze2.visualize_maze()
+    # maze3.bfsolver()
+    # maze3.visualize_maze()
+    maze = Maze(50,50)
+    maze.generateAgentMaze()
+    # maze1 = maze
+    # maze1.dfsolver()
+    # maze1.visualize_maze()
+    start = (0,0)
+    goal = (49,49)
+    path = AstarSearch(start,goal,maze1)
+    print(path)
+    maze1.visualize_maze()
