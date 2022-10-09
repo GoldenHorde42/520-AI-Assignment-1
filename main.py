@@ -171,7 +171,7 @@ class Maze:
                     n+=1
                 #print(self.maze[i][j], end = " ")
             #print("\n")
-        print(m/(m+n))
+        #print(m/(m+n))
         if k == 0:
             gridcolors = colors.ListedColormap(["white","black"])
         else:
@@ -181,7 +181,7 @@ class Maze:
         plt.show()
         #print(self.maze)
         #print(self.visited)
-def tracePath(cell : Cell, maze : Maze):
+def tracePath(cell : Cell, maze : Maze, notGoal=0):
     pathTaken = []
     maze.solution = []
     steps = 0
@@ -191,7 +191,7 @@ def tracePath(cell : Cell, maze : Maze):
         maze.solution.append(cell.coordinates)
         cell = cell.parentCell
         steps+=1
-    return pathTaken,steps
+    return pathTaken,steps,notGoal
 def AstarSearch(start, goal, maze : Maze):
 
     startCell = Cell(start, None)
@@ -250,7 +250,7 @@ def AstarSearch(start, goal, maze : Maze):
             if weakerNeighbour:
                 continue
             openList.put(neighbour)
-    return tracePath(currentCell,maze)       
+    return tracePath(currentCell,maze,1)       
 
 class Agent:
 
@@ -260,10 +260,14 @@ class Agent:
         self.position = (0,0)
         self.moves = 0
     def findForwardPath(self):
-        path,steps = AstarSearch(self.position,self.goal,self.gridworld)
+        path,steps,notGoal = AstarSearch(self.position,self.goal,self.gridworld)
+        if notGoal:
+            return notGoal
         return path
     def findBackwardPath(self):
-        path,steps = AstarSearch(self.goal,self.position,self.gridworld)
+        path,steps,notGoal = AstarSearch(self.goal,self.position,self.gridworld)
+        if notGoal:
+            return notGoal
         return path
     def makeMoves(self, maze : Maze, path):
         for i in path[::-1]:
@@ -275,21 +279,24 @@ class Agent:
                 break
 
 if __name__ == "__main__":
-    # maze1 = Maze(50,50)
-    # maze1.generate_maze()
-    # maze1.visualize_maze()
-    # maze1.clearVisitedArray()
+    maze1 = Maze(50,50)
+    maze1.generate_maze()
+    maze1.visualize_maze()
+    maze1.clearVisitedArray()
     # mazefile = open("mazefile.obj", 'wb')
     # pickle.dump(maze1,mazefile)
-    mazefilereader = open("mazefile.obj",'rb')
-    storedmaze = pickle.load(mazefilereader)
-    storedmaze.visualize_maze()
+    # mazefilereader = open("mazefile.obj",'rb')
+    # storedmaze = pickle.load(mazefilereader)
+    # storedmaze.visualize_maze()
     start = (0,0)
     goal = (49,49)
-    path,steps = AstarSearch(start,goal,storedmaze)
-    print(path,"in", steps," steps" )
-    #print(storedmaze.solution)
-    storedmaze.visualize_maze()
+    path,steps,notGoal = AstarSearch(start,goal,maze1)
+    if(not notGoal):
+        print(path,"in", steps," steps" )
+    else:
+        print("Goal is blocked by cells")
+    # print(storedmaze.solution)
+    maze1.visualize_maze()
     emptyworld = Maze(50,50)
     emptyworld.generateAgentMaze()
     agent1 = Agent(emptyworld,goal)
@@ -298,10 +305,41 @@ if __name__ == "__main__":
         #agent1.gridworld.visualize_maze()
         #print(agentPath)
         #print(agent1.position)
+        if agentPath == 1:
+            print("Goal unreachable after ", agent1.moves," moves")
+            break
         reversedAgentPath = agentPath[::-1]
-        agent1.makeMoves(storedmaze,agentPath)
+        agent1.makeMoves(maze1,agentPath)
     agent1.gridworld.visualize_maze()
-    print("solved the maze in -", agent1.moves," moves with fog of war using Repeated Forward A*")
+    if agentPath != 1:
+        print("solved the maze in -", agent1.moves," moves with fog of war using Repeated Forward A*")
+    solved = 0
+    blocked = 0
+    for i in range(100):
+        maze = Maze(50,50)
+        maze.generate_maze()
+        maze.clearVisitedArray()
+        path,steps,notGoal = AstarSearch(start,goal,maze)
+        if(not notGoal):
+            print ("Maze ",i," can solved with the path: in", steps," steps without fog of war" )
+        else:
+            print("Goal is blocked by cells")
+        emptyworld = Maze(50,50)
+        emptyworld.generateAgentMaze()
+        agent1 = Agent(emptyworld,goal)
+        while(agent1.position != goal):
+            agentPath = agent1.findForwardPath()
+            #print(agentPath)
+            if agentPath == 1:
+                print("Goal unreachable after ", agent1.moves," moves")
+                blocked+=1
+                break
+            reversedAgentPath = agentPath[::-1]
+            agent1.makeMoves(maze,agentPath)
+        if agentPath != 1:
+            print("solved the maze in -", agent1.moves," moves with fog of war using Repeated Forward A*")
+            solved+=1
+    print("I solved ",solved," mazes and the other ",blocked," were blocked :) thanks to Goutham")
     # maze3 = maze2 = maze1
     # maze2.dfsolver()
     # maze2.visualize_maze()
