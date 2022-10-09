@@ -258,13 +258,18 @@ class Agent:
         self.gridworld = gridworld
         self.goal = goal
         self.position = (0,0)
-    def findPath(self):
+        self.moves = 0
+    def findForwardPath(self):
         path,steps = AstarSearch(self.position,self.goal,self.gridworld)
+        return path
+    def findBackwardPath(self):
+        path,steps = AstarSearch(self.goal,self.position,self.gridworld)
         return path
     def makeMoves(self, maze : Maze, path):
         for i in path[::-1]:
             if maze.maze[i[0]][i[1]] == 0:
                 self.position = i
+                self.moves+=1
             else:
                 self.gridworld.maze[i[0]][i[1]] = 1
                 break
@@ -289,12 +294,14 @@ if __name__ == "__main__":
     emptyworld.generateAgentMaze()
     agent1 = Agent(emptyworld,goal)
     while(agent1.position != goal):
-        agentPath = agent1.findPath()
-        print(agent1.position)
+        agentPath = agent1.findForwardPath()
+        #agent1.gridworld.visualize_maze()
+        #print(agentPath)
+        #print(agent1.position)
+        reversedAgentPath = agentPath[::-1]
         agent1.makeMoves(storedmaze,agentPath)
-        agent1.gridworld.visualize_maze()
     agent1.gridworld.visualize_maze()
-    
+    print("solved the maze in -", agent1.moves," moves with fog of war using Repeated Forward A*")
     # maze3 = maze2 = maze1
     # maze2.dfsolver()
     # maze2.visualize_maze()
