@@ -3,7 +3,10 @@ from re import S
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+from matplotlib import colors
 from queue import PriorityQueue
+import pickle
+import copy
 class Cell:
 
     def __init__(self, coordinates=None, parentCell=None):
@@ -23,6 +26,9 @@ class Cell:
     def __lt__(self,other):
         if (self.fval < other.fval):
             return 1
+        elif(self.fval == other.fval):
+            if (self.gval > other.gval):
+                return 1
         return 0
 
 
@@ -37,6 +43,7 @@ class Maze:
         self.dRow = [0, 1, 0, -1]
         self.dCol = [-1, 0, 1, 0]
         self.visited = [[0] * self.rows for i in range(self.columns)]
+        self.solution = []
     def validity(self, r, c):
         
         if (r < 0 or r >= self.rows): #row bounds
@@ -148,27 +155,43 @@ class Maze:
     def visualize_maze(self):
         m = 0
         n = 0
+        k = 0
+        colormaze = copy.deepcopy(self.maze)
         for i in range(self.rows):
             for j in range(self.columns):
-                print(self.maze[i][j], end = " ")
-                if self.maze[i][j] == 1:
+                
+                if colormaze[i][j] == 1:
                     m+=1
+                # elif self.maze[i][j] == 2:
+                #     k+=1
+                elif (i,j) in self.solution:
+                    colormaze[i][j] = 2
+                    k+=1
                 else:
                     n+=1
-
-            print("\n")
+                #print(self.maze[i][j], end = " ")
+            #print("\n")
         print(m/(m+n))
-        plt.imshow(self.maze,cmap='gray_r')
+        if k == 0:
+            gridcolors = colors.ListedColormap(["white","black"])
+        else:
+            gridcolors = colors.ListedColormap(["white","black","red"])
+        
+        plt.imshow(colormaze,cmap=gridcolors)
         plt.show()
         #print(self.maze)
         #print(self.visited)
 def tracePath(cell : Cell, maze : Maze):
     pathTaken = []
+    maze.solution = []
+    steps = 0
     while cell is not None:
         pathTaken.append(cell.coordinates)
-        maze.maze[cell.coordinates[0]][cell.coordinates[1]] = 2
+        #maze.maze[cell.coordinates[0]][cell.coordinates[1]] = 2
+        maze.solution.append(cell.coordinates)
         cell = cell.parentCell
-    return pathTaken
+        steps+=1
+    return pathTaken,steps
 def AstarSearch(start, goal, maze : Maze):
 
     startCell = Cell(start, None)
@@ -178,7 +201,7 @@ def AstarSearch(start, goal, maze : Maze):
 
     startCell.gval = startCell.hval = startCell.fval = 0
     goalCell.gval = goalCell.hval = goalCell.fval = 0
-    print(startCell.coordinates, goalCell.coordinates)
+    #print(startCell.coordinates, goalCell.coordinates)
     #create a priority queue for the open list
 
     openList = PriorityQueue()
@@ -190,7 +213,7 @@ def AstarSearch(start, goal, maze : Maze):
 
     while(not openList.empty()):
         currentCell = openList.get()
-        print(currentCell.coordinates)
+        #print(currentCell.coordinates)
         if currentCell == goalCell:
             return tracePath(currentCell,maze) #A function to return the actual path
         #print("here1")
@@ -201,11 +224,11 @@ def AstarSearch(start, goal, maze : Maze):
             neighbour_x = currentCell.coordinates[0] + AdjacentRowIndex[i]
             neighbour_y = currentCell.coordinates[1] + AdjacentColumnIndex[i]
             if not maze.validity(neighbour_x,neighbour_y):
-                print("oops")
+                #print("oops")
                 continue
             neighbourCords = (neighbour_x,neighbour_y)
             neighbour = Cell(neighbourCords,currentCell)
-            print(neighbour.coordinates)
+            #print(neighbour.coordinates)
             neighbourCells.append(neighbour)
         for neighbour in neighbourCells:
             visited = 0
@@ -229,27 +252,57 @@ def AstarSearch(start, goal, maze : Maze):
             openList.put(neighbour)
     return tracePath(currentCell,maze)       
 
-    
+class Agent:
 
-
+    def __init__(self,gridworld,goal):
+        self.gridworld = gridworld
+        self.goal = goal
+        self.position = (0,0)
+    def findPath(self):
+        path,steps = AstarSearch(self.position,self.goal,self.gridworld)
+        return path
+    def makeMoves(self, maze : Maze, path):
+        for i in path[::-1]:
+            if maze.maze[i[0]][i[1]] == 0:
+                self.position = i
+            else:
+                self.gridworld.maze[i[0]][i[1]] = 1
+                break
 
 if __name__ == "__main__":
-    maze1 = Maze(50,50)
-    maze1.generate_maze()
-    maze1.visualize_maze()
-    maze1.clearVisitedArray()
+    # maze1 = Maze(50,50)
+    # maze1.generate_maze()
+    # maze1.visualize_maze()
+    # maze1.clearVisitedArray()
+    # mazefile = open("mazefile.obj", 'wb')
+    # pickle.dump(maze1,mazefile)
+    mazefilereader = open("mazefile.obj",'rb')
+    storedmaze = pickle.load(mazefilereader)
+    storedmaze.visualize_maze()
+    start = (0,0)
+    goal = (49,49)
+    path,steps = AstarSearch(start,goal,storedmaze)
+    print(path,"in", steps," steps" )
+    #print(storedmaze.solution)
+    storedmaze.visualize_maze()
+    emptyworld = Maze(50,50)
+    emptyworld.generateAgentMaze()
+    agent1 = Agent(emptyworld,goal)
+    while(agent1.position != goal):
+        agentPath = agent1.findPath()
+        print(agent1.position)
+        agent1.makeMoves(storedmaze,agentPath)
+        agent1.gridworld.visualize_maze()
+    agent1.gridworld.visualize_maze()
+    
     # maze3 = maze2 = maze1
     # maze2.dfsolver()
     # maze2.visualize_maze()
     # maze3.bfsolver()
     # maze3.visualize_maze()
-    maze = Maze(50,50)
-    maze.generateAgentMaze()
+    #maze2 = Maze(5,5)
+    #maze2.generateAgentMaze()
+    #maze2.visualize_maze()
     # maze1 = maze
     # maze1.dfsolver()
     # maze1.visualize_maze()
-    start = (0,0)
-    goal = (49,49)
-    path = AstarSearch(start,goal,maze1)
-    print(path)
-    maze1.visualize_maze()
