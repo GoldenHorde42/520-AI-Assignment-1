@@ -1,5 +1,6 @@
 from array import *
 from re import S
+from typing import Dict
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
@@ -182,7 +183,7 @@ class Maze:
         plt.show()
         #print(self.maze)
         #print(self.visited)
-def tracePath(cell : Cell, maze : Maze, notGoal=0):
+def tracePath(cell : Cell, maze : Maze,expandedCells, notGoal=0):
     pathTaken = []
     maze.solution = []
     steps = 0
@@ -192,9 +193,9 @@ def tracePath(cell : Cell, maze : Maze, notGoal=0):
         maze.solution.append(cell.coordinates)
         cell = cell.parentCell
         steps+=1
-    return pathTaken,steps,notGoal
+    return pathTaken,steps,notGoal,expandedCells
 def AstarSearch(start, goal, maze : Maze):
-
+    expandedCells = 0
     startCell = Cell(start, None)
     goalCell = Cell(goal, None)
 
@@ -208,15 +209,18 @@ def AstarSearch(start, goal, maze : Maze):
     openList = PriorityQueue()
     closedList = []
     openList.put(startCell)
+    #expandedCells+=1
     
     AdjacentRowIndex = [0, 1, 0, -1]
     AdjacentColumnIndex = [-1, 0, 1, 0]
 
     while(not openList.empty()):
         currentCell = openList.get()
+        expandedCells+=1
         #print(currentCell.coordinates)
         if currentCell == goalCell:
-            return tracePath(currentCell,maze) #A function to return the actual path
+            #print(expandedCells)
+            return tracePath(currentCell,maze,expandedCells) #A function to return the actual path
         #print("here1")
         closedList.append(currentCell)
 
@@ -251,7 +255,7 @@ def AstarSearch(start, goal, maze : Maze):
             if weakerNeighbour:
                 continue
             openList.put(neighbour)
-    return tracePath(currentCell,maze,1)       
+    return tracePath(currentCell,maze,expandedCells,1)       
 
 
 
@@ -263,64 +267,73 @@ def AstarSearch(start, goal, maze : Maze):
 
 class Agent:
 
-    def __init__(self,gridworld,goal):
+    def __init__(self,gridworld,start,goal):
         self.gridworld = gridworld
         self.goal = goal
-        self.position = (0,0)
+        self.position = start
         self.moves = 0
         self.locations = {}
     def findForwardPath(self):
-        path,steps,notGoal = AstarSearch(self.position,self.goal,self.gridworld)
+        path,steps,notGoal,expandedCells = AstarSearch(self.position,self.goal,self.gridworld)
         if notGoal:
-            return notGoal
-        return path
+            return notGoal,expandedCells
+        return path,expandedCells
     def findBackwardPath(self):
         path,steps,notGoal = AstarSearch(self.goal,self.position,self.gridworld)
         if notGoal:
             return notGoal
         return path
     def findAdaptivePath(self):
-        path,steps,notGoal,hvals = AdaptiveAstarSearch(self.position,self.goal,self.gridworld,self.locations)
+        path,steps,notGoal,hvals,expandedCells = AdaptiveAstarSearch(self.position,self.goal,self.gridworld,self.locations)
         #print (hvals)
         for i in hvals:
                 self.locations[i] = hvals[i]
+        #print(self.locations)
         if notGoal:
-            return notGoal
-        return path
+            return notGoal,expandedCells
+        return path,expandedCells
 
     def makeAdaptiveMoves(self, maze : Maze, path):
         for i in path[::-1]:
             if maze.maze[i[0]][i[1]] == 0:
+                if (self.position != i):
+                    self.moves+=1
                 self.position = i
-                self.moves+=1
+                #self.moves+=1
             else:
                 self.gridworld.maze[i[0]][i[1]] = 1
                 break  
     def makeMoves(self, maze : Maze, path):
         for i in path[::-1]:
             if maze.maze[i[0]][i[1]] == 0:
+                if (self.position != i):
+                    self.moves+=1
                 self.position = i
-                self.moves+=1
+                #self.moves+=1
+                
             else:
                 self.gridworld.maze[i[0]][i[1]] = 1
                 break
 
-def adaptiveTracePath(cell : Cell, maze : Maze, notGoal=0):
+def adaptiveTracePath(cell : Cell, maze : Maze, closedList,expandedCells, notGoal=0):
     pathTaken = []
     maze.solution = []
     steps = 0
     goalgval = cell.gval
     hvals = {}
+
+    for node in closedList:
+        hvals[node.coordinates] = goalgval - node.gval
+
     while cell is not None:
         pathTaken.append(cell.coordinates)
-        hvals[cell.coordinates] = goalgval - cell.gval
-        #maze.maze[cell.coordinates[0]][cell.coordinates[1]] = 2
         maze.solution.append(cell.coordinates)
         cell = cell.parentCell
         steps+=1
-    return pathTaken,steps,notGoal,hvals
+    return pathTaken,steps,notGoal,hvals,expandedCells
 
 def AdaptiveAstarSearch(start, goal, maze : Maze, agentlocations):
+    expandedCells = 0
     startCell = Cell(start, None)
     goalCell = Cell(goal, None)
 
@@ -330,14 +343,16 @@ def AdaptiveAstarSearch(start, goal, maze : Maze, agentlocations):
     openList = PriorityQueue()
     closedList = []
     openList.put(startCell)
-    
+    #expandedCells+=1
     AdjacentRowIndex = [0, 1, 0, -1]
     AdjacentColumnIndex = [-1, 0, 1, 0]
 
     while(not openList.empty()):
         currentCell = openList.get()
+        expandedCells+=1
         if currentCell == goalCell:
-            return adaptiveTracePath(currentCell,maze)
+            #print(expandedCells)
+            return adaptiveTracePath(currentCell,maze,closedList,expandedCells)
         closedList.append(currentCell)
         neighbourCells = [] #To explore the neighbours of the current cell
         for i in range(4):
@@ -360,7 +375,9 @@ def AdaptiveAstarSearch(start, goal, maze : Maze, agentlocations):
             neighbour.gval = currentCell.gval + 1
             if neighbour.coordinates in agentlocations:
                 neighbour.hval = agentlocations[neighbour.coordinates]
+                #agentlocations[neighbour.coordinates] = neighbour.gval
             else: 
+                #agentlocations[neighbour.coordinates] = neighbour.gval
                 neighbour.hval = abs(goalCell.coordinates[0] - neighbour.coordinates[0]) + abs(goalCell.coordinates[1] - neighbour.coordinates[1])
 
             neighbour.fval = neighbour.gval + neighbour.hval
@@ -371,7 +388,7 @@ def AdaptiveAstarSearch(start, goal, maze : Maze, agentlocations):
             if weakerNeighbour:
                 continue
             openList.put(neighbour)
-    return adaptiveTracePath(currentCell,maze,1)
+    return adaptiveTracePath(currentCell,maze,closedList,expandedCells, 1)
 
         
         
@@ -385,30 +402,36 @@ def AdaptiveAstarSearch(start, goal, maze : Maze, agentlocations):
 
 
 if __name__ == "__main__":
-    maze1 = Maze(50,50)
+    maze1 = Maze(5,5)
     maze1.generate_maze()
-    maze1.visualize_maze()
+    
     maze1.clearVisitedArray()
+    maze1.maze = [[0,0,0,0,0],[0,0,1,0,0],[0,0,1,1,0],[0,0,1,1,0],[0,0,0,1,0]]
     # mazefile = open("mazefile.obj", 'wb')
     # pickle.dump(maze1,mazefile)
     # mazefilereader = open("mazefile.obj",'rb')
     # storedmaze = pickle.load(mazefilereader)
     # storedmaze.visualize_maze()
-    start = (0,0)
-    goal = (49,49)
-    path,steps,notGoal = AstarSearch(start,goal,maze1)
+    start = (4,2)
+    goal = (4,4)
+    maze1.visualize_maze()
+    path,steps,notGoal,expandedCells = AstarSearch(start,goal,maze1)
     if(not notGoal):
         print(path,"in", steps," steps" )
     else:
         print("Goal is blocked by cells")
     # print(storedmaze.solution)
     maze1.visualize_maze()
-    emptyworld = Maze(50,50)
+    emptyworld = Maze(5,5)
     emptyworld.generateAgentMaze()
-    agent1 = Agent(emptyworld,goal)
+    agent1 = Agent(emptyworld,start,goal)
+    TotalExpandedCells = 0
+    iterations = 0
     while(agent1.position != goal):
-        agentPath = agent1.findForwardPath()
-        #agent1.gridworld.visualize_maze()
+        iterations += 1
+        agentPath,expandedCells = agent1.findForwardPath()
+        agent1.gridworld.visualize_maze()
+        TotalExpandedCells += expandedCells
         #print(agentPath)
         #print(agent1.position)
         if agentPath == 1:
@@ -416,42 +439,56 @@ if __name__ == "__main__":
             break
         reversedAgentPath = agentPath[::-1]
         agent1.makeMoves(maze1,agentPath)
+        #print(agent1.moves)
     agent1.gridworld.visualize_maze()
     if agentPath != 1:
         print("solved the maze in -", agent1.moves," moves with fog of war using Repeated Forward A*")
-    emptyworld1 = Maze(50,50)
+    print(TotalExpandedCells)
+    iterations = 0
+    emptyworld1 = Maze(5,5)
     emptyworld1.generateAgentMaze()
-    agent2 = Agent(emptyworld1,goal)
+    agent2 = Agent(emptyworld1,start,goal)
+    TotalAexpandedCells = 0
     while(agent2.position != goal):
-        agentPath = agent2.findAdaptivePath()
-        #agent2.gridworld.visualize_maze()
+        iterations+=1
+        agentPath,expandedCells= agent2.findAdaptivePath()
+        TotalAexpandedCells += expandedCells
+        agent2.gridworld.visualize_maze()
         if agentPath == 1:
             print("Goal unreachable after ", agent2.moves," moves")
             break
         agent2.makeAdaptiveMoves(maze1,agentPath)
+        #print(agent2.moves)
     if agentPath != 1:
         print("solved the maze in -", agent2.moves," moves with fog of war using Adaptive A*")
+    print(TotalAexpandedCells)
 
-
-
+    start = (0,0)
+    goal = (49,49)
     agent1moves = 0
     agent2moves = 0
     solved = 0
     blocked = 0
-    for i in range(10):
+    TotalForwardExpandedCells = 0
+    TotalAdaptiveExpandedCells = 0
+    for i in range(100):
         maze = Maze(50,50)
         maze.generate_maze()
         maze.clearVisitedArray()
-        path,steps,notGoal = AstarSearch(start,goal,maze)
+        path,steps,notGoal,expandedCells = AstarSearch(start,goal,maze)
         if(not notGoal):
             print ("Maze ",i," can solved with the path: in", steps," steps without fog of war" )
         else:
             print("Goal is blocked by cells")
         emptyworld = Maze(50,50)
         emptyworld.generateAgentMaze()
-        agent1 = Agent(emptyworld,goal)
+        agent1 = Agent(emptyworld,start,goal)
+        TotalExpandedCells = 0
+        iterations = 0
         while(agent1.position != goal):
-            agentPath = agent1.findForwardPath()
+            iterations += 1
+            agentPath,expandedCells = agent1.findForwardPath()
+            TotalExpandedCells = TotalExpandedCells + expandedCells
             #print(agentPath)
             if agentPath == 1:
                 print("Goal unreachable after ", agent1.moves," moves")
@@ -463,23 +500,36 @@ if __name__ == "__main__":
             print("solved the maze in -", agent1.moves," moves with fog of war using Repeated Forward A*")
             agent1moves += agent1.moves
             solved+=1
-        
+        print(TotalExpandedCells)
         #adaptive
+        TotalAexpandedCells = 0
         emptyworld1 = Maze(50,50)
         emptyworld1.generateAgentMaze()
-        agent2 = Agent(emptyworld1,goal)
+        iterations = 0
+        agent2 = Agent(emptyworld1,start,goal)
         while(agent2.position != goal):
-            agentPath = agent2.findAdaptivePath()
+            iterations += 1
+            agentPath,expandedCells = agent2.findAdaptivePath()
+            TotalAexpandedCells += expandedCells
             if agentPath == 1:
                 print("Goal unreachable after ", agent2.moves," moves")
                 break
             agent2.makeAdaptiveMoves(maze,agentPath)
         if agentPath != 1:
             print("solved the maze in -", agent2.moves," moves with fog of war using Adaptive A*")
+            
             agent2moves += agent2.moves
+        print(TotalAexpandedCells)
+        TotalForwardExpandedCells += TotalExpandedCells
+        TotalAdaptiveExpandedCells += TotalAexpandedCells
     print("I solved ",solved," mazes and the other ",blocked," were blocked :) thanks to Goutham")
     print("agent 1 took ", agent1moves/100, " moves on average")
     print("agent 2 took ", agent2moves/100, " moves on average")
+    print(TotalAdaptiveExpandedCells/TotalForwardExpandedCells)
+    
+    
+    
+    
     # maze3 = maze2 = maze1
     # maze2.dfsolver()
     # maze2.visualize_maze()
