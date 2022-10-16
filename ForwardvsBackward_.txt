@@ -1,0 +1,37 @@
+solved the maze in - 68 moves with fog of war using Repeated Forward A*
+Total Sum of expanded states after each A* call : 894
+Time Taken: 0.023936033248901367
+solved the maze in - 94 moves with fog of war using Repeated Backward A*
+Total Sum of expanded states after each A* call : 9461
+Time Taken: 1.1010537147521973
+solved the maze in - 180 moves with fog of war using Repeated Backward A*
+Total Sum of expanded states after each A* call : 16513
+Time Taken: 3.1995062828063965
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+Total Sum of expanded states after each A* call : 3326
+Time Taken: 0.08975982666015625
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+Total Sum of expanded states after each A* call : 95214
+Time Taken: 61.87996506690979
+solved the maze in - 164 moves with fog of war using Adaptive A*
+Total Sum of expanded states after each A* call : 34465
+Time Taken: 39.360453605651855
+
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+17.87928581237793
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+49.12702131271362
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+19.23802089691162
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+51.86890912055969
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+18.298025369644165
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+47.885732650756836

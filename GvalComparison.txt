@@ -1,0 +1,8 @@
+solved the maze in - 176 moves with fog of war using Repeated Forward A*
+Total Sum of expanded states after each A* call : 3240
+Time Taken : 0.08728837966918945
+solved the maze in - 168 moves with fog of war using Repeated Forward A (lesser gval)*
+Total Sum of expanded states after each A* call : 47931
+Time Taken : 15.387331008911133
+
+

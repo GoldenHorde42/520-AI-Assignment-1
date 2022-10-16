@@ -1,0 +1,915 @@
+Goal is blocked by cells
+Goal unreachable after 158 moves
+Goal unreachable after 158 moves
+Maze 1 can solved with the path: in 99 steps without fog of war
+solved the maze in - 192 moves with fog of war using Repeated Forward A*
+solved the maze in - 200 moves with fog of war using Adaptive A*
+Maze 2 can solved with the path: in 101 steps without fog of war
+solved the maze in - 176 moves with fog of war using Repeated Forward A*
+solved the maze in - 176 moves with fog of war using Adaptive A*
+Maze 3 can solved with the path: in 99 steps without fog of war
+solved the maze in - 210 moves with fog of war using Repeated Forward A*
+solved the maze in - 210 moves with fog of war using Adaptive A*
+Maze 4 can solved with the path: in 99 steps without fog of war
+solved the maze in - 188 moves with fog of war using Repeated Forward A*
+solved the maze in - 188 moves with fog of war using Adaptive A*
+Maze 5 can solved with the path: in 99 steps without fog of war
+solved the maze in - 218 moves with fog of war using Repeated Forward A*
+solved the maze in - 222 moves with fog of war using Adaptive A*
+Maze 6 can solved with the path: in 99 steps without fog of war
+solved the maze in - 184 moves with fog of war using Repeated Forward A*
+solved the maze in - 246 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 6 moves
+Goal unreachable after 6 moves
+Maze 8 can solved with the path: in 99 steps without fog of war
+solved the maze in - 142 moves with fog of war using Repeated Forward A*
+solved the maze in - 142 moves with fog of war using Adaptive A*
+Maze 9 can solved with the path: in 99 steps without fog of war
+solved the maze in - 166 moves with fog of war using Repeated Forward A*
+solved the maze in - 166 moves with fog of war using Adaptive A*
+Maze 10 can solved with the path: in 103 steps without fog of war
+solved the maze in - 242 moves with fog of war using Repeated Forward A*
+solved the maze in - 244 moves with fog of war using Adaptive A*
+Maze 11 can solved with the path: in 101 steps without fog of war
+solved the maze in - 204 moves with fog of war using Repeated Forward A*
+solved the maze in - 202 moves with fog of war using Adaptive A*
+Maze 12 can solved with the path: in 99 steps without fog of war
+solved the maze in - 126 moves with fog of war using Repeated Forward A*
+solved the maze in - 126 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 10 moves
+Goal unreachable after 10 moves
+Goal is blocked by cells
+Goal unreachable after 153 moves
+Goal unreachable after 153 moves
+Maze 15 can solved with the path: in 101 steps without fog of war
+solved the maze in - 180 moves with fog of war using Repeated Forward A*
+solved the maze in - 222 moves with fog of war using Adaptive A*
+Maze 16 can solved with the path: in 99 steps without fog of war
+solved the maze in - 226 moves with fog of war using Repeated Forward A*
+solved the maze in - 228 moves with fog of war using Adaptive A*
+Maze 17 can solved with the path: in 101 steps without fog of war
+solved the maze in - 150 moves with fog of war using Repeated Forward A*
+solved the maze in - 150 moves with fog of war using Adaptive A*
+Maze 18 can solved with the path: in 101 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 174 moves with fog of war using Adaptive A*
+Maze 19 can solved with the path: in 101 steps without fog of war
+solved the maze in - 186 moves with fog of war using Repeated Forward A*
+solved the maze in - 186 moves with fog of war using Adaptive A*
+Maze 20 can solved with the path: in 101 steps without fog of war
+solved the maze in - 216 moves with fog of war using Repeated Forward A*
+solved the maze in - 218 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 30 moves
+Goal unreachable after 30 moves
+Goal is blocked by cells
+Goal unreachable after 218 moves
+Goal unreachable after 234 moves
+Maze 23 can solved with the path: in 99 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 174 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 216 moves
+Goal unreachable after 218 moves
+Maze 25 can solved with the path: in 99 steps without fog of war
+solved the maze in - 198 moves with fog of war using Repeated Forward A*
+solved the maze in - 200 moves with fog of war using Adaptive A*
+Maze 26 can solved with the path: in 103 steps without fog of war
+solved the maze in - 182 moves with fog of war using Repeated Forward A*
+solved the maze in - 178 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 228 moves
+Goal unreachable after 280 moves
+Maze 28 can solved with the path: in 99 steps without fog of war
+solved the maze in - 132 moves with fog of war using Repeated Forward A*
+solved the maze in - 132 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 165 moves
+Goal unreachable after 163 moves
+Maze 30 can solved with the path: in 99 steps without fog of war
+solved the maze in - 162 moves with fog of war using Repeated Forward A*
+solved the maze in - 162 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 263 moves
+Goal unreachable after 263 moves
+Maze 32 can solved with the path: in 99 steps without fog of war
+solved the maze in - 164 moves with fog of war using Repeated Forward A*
+solved the maze in - 166 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 122 moves
+Goal unreachable after 122 moves
+Goal is blocked by cells
+Goal unreachable after 152 moves
+Goal unreachable after 160 moves
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Maze 36 can solved with the path: in 103 steps without fog of war
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+solved the maze in - 190 moves with fog of war using Adaptive A*
+Maze 37 can solved with the path: in 101 steps without fog of war
+solved the maze in - 150 moves with fog of war using Repeated Forward A*
+solved the maze in - 150 moves with fog of war using Adaptive A*
+Maze 38 can solved with the path: in 105 steps without fog of war
+solved the maze in - 200 moves with fog of war using Repeated Forward A*
+solved the maze in - 200 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 146 moves
+Goal unreachable after 146 moves
+Maze 40 can solved with the path: in 99 steps without fog of war
+solved the maze in - 148 moves with fog of war using Repeated Forward A*
+solved the maze in - 146 moves with fog of war using Adaptive A*
+Maze 41 can solved with the path: in 99 steps without fog of war
+solved the maze in - 150 moves with fog of war using Repeated Forward A*
+solved the maze in - 138 moves with fog of war using Adaptive A*
+Maze 42 can solved with the path: in 99 steps without fog of war
+solved the maze in - 152 moves with fog of war using Repeated Forward A*
+solved the maze in - 152 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 156 moves
+Goal unreachable after 156 moves
+Maze 44 can solved with the path: in 99 steps without fog of war
+solved the maze in - 172 moves with fog of war using Repeated Forward A*
+solved the maze in - 154 moves with fog of war using Adaptive A*
+Maze 45 can solved with the path: in 99 steps without fog of war
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+solved the maze in - 178 moves with fog of war using Adaptive A*
+Maze 46 can solved with the path: in 99 steps without fog of war
+solved the maze in - 192 moves with fog of war using Repeated Forward A*
+solved the maze in - 192 moves with fog of war using Adaptive A*
+Maze 47 can solved with the path: in 99 steps without fog of war
+solved the maze in - 244 moves with fog of war using Repeated Forward A*
+solved the maze in - 244 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 167 moves
+Goal unreachable after 167 moves
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Maze 50 can solved with the path: in 99 steps without fog of war
+solved the maze in - 218 moves with fog of war using Repeated Forward A*
+solved the maze in - 218 moves with fog of war using Adaptive A*
+Maze 51 can solved with the path: in 99 steps without fog of war
+solved the maze in - 170 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 294 moves
+Goal unreachable after 296 moves
+Maze 53 can solved with the path: in 103 steps without fog of war
+solved the maze in - 294 moves with fog of war using Repeated Forward A*
+solved the maze in - 294 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 51 moves
+Goal unreachable after 51 moves
+Maze 55 can solved with the path: in 103 steps without fog of war
+solved the maze in - 138 moves with fog of war using Repeated Forward A*
+solved the maze in - 138 moves with fog of war using Adaptive A*
+Maze 56 can solved with the path: in 99 steps without fog of war
+solved the maze in - 232 moves with fog of war using Repeated Forward A*
+solved the maze in - 218 moves with fog of war using Adaptive A*
+Maze 57 can solved with the path: in 99 steps without fog of war
+solved the maze in - 172 moves with fog of war using Repeated Forward A*
+solved the maze in - 172 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Goal is blocked by cells
+Goal unreachable after 252 moves
+Goal unreachable after 252 moves
+Maze 60 can solved with the path: in 99 steps without fog of war
+solved the maze in - 248 moves with fog of war using Repeated Forward A*
+solved the maze in - 272 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 150 moves
+Goal unreachable after 172 moves
+Goal is blocked by cells
+Goal unreachable after 144 moves
+Goal unreachable after 164 moves
+Goal is blocked by cells
+Goal unreachable after 181 moves
+Goal unreachable after 181 moves
+Maze 64 can solved with the path: in 99 steps without fog of war
+solved the maze in - 180 moves with fog of war using Repeated Forward A*
+solved the maze in - 182 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 19 moves
+Goal unreachable after 19 moves
+Goal is blocked by cells
+Goal unreachable after 146 moves
+Goal unreachable after 146 moves
+Goal is blocked by cells
+Goal unreachable after 228 moves
+Goal unreachable after 218 moves
+Goal is blocked by cells
+Goal unreachable after 17 moves
+Goal unreachable after 17 moves
+Goal is blocked by cells
+Goal unreachable after 201 moves
+Goal unreachable after 233 moves
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Goal is blocked by cells
+Goal unreachable after 13 moves
+Goal unreachable after 13 moves
+Goal is blocked by cells
+Goal unreachable after 131 moves
+Goal unreachable after 131 moves
+Maze 73 can solved with the path: in 99 steps without fog of war
+solved the maze in - 122 moves with fog of war using Repeated Forward A*
+solved the maze in - 158 moves with fog of war using Adaptive A*
+Maze 74 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 160 moves with fog of war using Adaptive A*
+Maze 75 can solved with the path: in 99 steps without fog of war
+solved the maze in - 186 moves with fog of war using Repeated Forward A*
+solved the maze in - 196 moves with fog of war using Adaptive A*
+Maze 76 can solved with the path: in 99 steps without fog of war
+solved the maze in - 144 moves with fog of war using Repeated Forward A*
+solved the maze in - 144 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 225 moves
+Goal unreachable after 223 moves
+Goal is blocked by cells
+Goal unreachable after 7 moves
+Goal unreachable after 7 moves
+Goal is blocked by cells
+Goal unreachable after 191 moves
+Goal unreachable after 191 moves
+Maze 80 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 160 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 12 moves
+Goal unreachable after 12 moves
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Maze 83 can solved with the path: in 99 steps without fog of war
+solved the maze in - 184 moves with fog of war using Repeated Forward A*
+solved the maze in - 194 moves with fog of war using Adaptive A*
+Maze 84 can solved with the path: in 99 steps without fog of war
+solved the maze in - 244 moves with fog of war using Repeated Forward A*
+solved the maze in - 244 moves with fog of war using Adaptive A*
+Maze 85 can solved with the path: in 103 steps without fog of war
+solved the maze in - 132 moves with fog of war using Repeated Forward A*
+solved the maze in - 132 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 173 moves
+Goal unreachable after 173 moves
+Maze 87 can solved with the path: in 105 steps without fog of war
+solved the maze in - 170 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 140 moves
+Goal unreachable after 187 moves
+Maze 89 can solved with the path: in 99 steps without fog of war
+solved the maze in - 152 moves with fog of war using Repeated Forward A*
+solved the maze in - 152 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 231 moves
+Goal unreachable after 231 moves
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Goal is blocked by cells
+Goal unreachable after 115 moves
+Goal unreachable after 109 moves
+Maze 93 can solved with the path: in 99 steps without fog of war
+solved the maze in - 142 moves with fog of war using Repeated Forward A*
+solved the maze in - 142 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 202 moves
+Goal unreachable after 202 moves
+Maze 95 can solved with the path: in 105 steps without fog of war
+solved the maze in - 216 moves with fog of war using Repeated Forward A*
+solved the maze in - 216 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 282 moves
+Goal unreachable after 284 moves
+Maze 97 can solved with the path: in 107 steps without fog of war
+solved the maze in - 184 moves with fog of war using Repeated Forward A*
+solved the maze in - 184 moves with fog of war using Adaptive A*
+Maze 98 can solved with the path: in 103 steps without fog of war
+solved the maze in - 146 moves with fog of war using Repeated Forward A*
+solved the maze in - 146 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+I solved 55 mazes and the other 45 were blocked :) thanks to Goutham
+agent 1 took 99.5 moves on average
+agent 2 took 101.18 moves on average
+Adaptive A* expanded -0.2879397442559384 percent less cells than forward A* on average
+Adaptive A* took 0.36761965382009487 percent less time than forward A* on average
+Maze 0 can solved with the path: in 99 steps without fog of war
+solved the maze in - 206 moves with fog of war using Repeated Forward A*
+solved the maze in - 206 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 160 moves
+Goal unreachable after 160 moves
+Maze 2 can solved with the path: in 99 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 174 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 194 moves
+Goal unreachable after 190 moves
+Maze 4 can solved with the path: in 99 steps without fog of war
+solved the maze in - 128 moves with fog of war using Repeated Forward A*
+solved the maze in - 128 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 158 moves
+Goal unreachable after 158 moves
+Goal is blocked by cells
+Goal unreachable after 141 moves
+Goal unreachable after 141 moves
+Maze 7 can solved with the path: in 103 steps without fog of war
+solved the maze in - 170 moves with fog of war using Repeated Forward A*
+solved the maze in - 172 moves with fog of war using Adaptive A*
+Maze 8 can solved with the path: in 101 steps without fog of war
+solved the maze in - 204 moves with fog of war using Repeated Forward A*
+solved the maze in - 204 moves with fog of war using Adaptive A*
+Maze 9 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 160 moves with fog of war using Adaptive A*
+Maze 10 can solved with the path: in 99 steps without fog of war
+solved the maze in - 224 moves with fog of war using Repeated Forward A*
+solved the maze in - 220 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Maze 12 can solved with the path: in 99 steps without fog of war
+solved the maze in - 200 moves with fog of war using Repeated Forward A*
+solved the maze in - 196 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 7 moves
+Goal unreachable after 7 moves
+Goal is blocked by cells
+Goal unreachable after 143 moves
+Goal unreachable after 143 moves
+Maze 15 can solved with the path: in 99 steps without fog of war
+solved the maze in - 140 moves with fog of war using Repeated Forward A*
+solved the maze in - 146 moves with fog of war using Adaptive A*
+Maze 16 can solved with the path: in 101 steps without fog of war
+solved the maze in - 138 moves with fog of war using Repeated Forward A*
+solved the maze in - 138 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Maze 18 can solved with the path: in 101 steps without fog of war
+solved the maze in - 128 moves with fog of war using Repeated Forward A*
+solved the maze in - 128 moves with fog of war using Adaptive A*
+Maze 19 can solved with the path: in 99 steps without fog of war
+solved the maze in - 188 moves with fog of war using Repeated Forward A*
+solved the maze in - 190 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 213 moves
+Goal unreachable after 213 moves
+Maze 21 can solved with the path: in 99 steps without fog of war
+solved the maze in - 286 moves with fog of war using Repeated Forward A*
+solved the maze in - 288 moves with fog of war using Adaptive A*
+Maze 22 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 196 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 34 moves
+Goal unreachable after 34 moves
+Maze 24 can solved with the path: in 101 steps without fog of war
+solved the maze in - 182 moves with fog of war using Repeated Forward A*
+solved the maze in - 180 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 366 moves
+Goal unreachable after 366 moves
+Maze 26 can solved with the path: in 105 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 174 moves with fog of war using Adaptive A*
+Maze 27 can solved with the path: in 105 steps without fog of war
+solved the maze in - 200 moves with fog of war using Repeated Forward A*
+solved the maze in - 200 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Maze 29 can solved with the path: in 99 steps without fog of war
+solved the maze in - 256 moves with fog of war using Repeated Forward A*
+solved the maze in - 254 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Goal is blocked by cells
+Goal unreachable after 206 moves
+Goal unreachable after 196 moves
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Maze 33 can solved with the path: in 99 steps without fog of war
+solved the maze in - 186 moves with fog of war using Repeated Forward A*
+solved the maze in - 182 moves with fog of war using Adaptive A*
+Maze 34 can solved with the path: in 101 steps without fog of war
+solved the maze in - 168 moves with fog of war using Repeated Forward A*
+solved the maze in - 168 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 9 moves
+Goal unreachable after 9 moves
+Goal is blocked by cells
+Goal unreachable after 173 moves
+Goal unreachable after 173 moves
+Goal is blocked by cells
+Goal unreachable after 329 moves
+Goal unreachable after 333 moves
+Goal is blocked by cells
+Goal unreachable after 232 moves
+Goal unreachable after 230 moves
+Goal is blocked by cells
+Goal unreachable after 184 moves
+Goal unreachable after 188 moves
+Goal is blocked by cells
+Goal unreachable after 150 moves
+Goal unreachable after 150 moves
+Maze 41 can solved with the path: in 103 steps without fog of war
+solved the maze in - 154 moves with fog of war using Repeated Forward A*
+solved the maze in - 154 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 14 moves
+Goal unreachable after 14 moves
+Maze 43 can solved with the path: in 101 steps without fog of war
+solved the maze in - 196 moves with fog of war using Repeated Forward A*
+solved the maze in - 198 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 9 moves
+Goal unreachable after 9 moves
+Maze 45 can solved with the path: in 99 steps without fog of war
+solved the maze in - 136 moves with fog of war using Repeated Forward A*
+solved the maze in - 136 moves with fog of war using Adaptive A*
+Maze 46 can solved with the path: in 99 steps without fog of war
+solved the maze in - 256 moves with fog of war using Repeated Forward A*
+solved the maze in - 258 moves with fog of war using Adaptive A*
+Maze 47 can solved with the path: in 105 steps without fog of war
+solved the maze in - 162 moves with fog of war using Repeated Forward A*
+solved the maze in - 162 moves with fog of war using Adaptive A*
+Maze 48 can solved with the path: in 99 steps without fog of war
+solved the maze in - 130 moves with fog of war using Repeated Forward A*
+solved the maze in - 130 moves with fog of war using Adaptive A*
+Maze 49 can solved with the path: in 101 steps without fog of war
+solved the maze in - 184 moves with fog of war using Repeated Forward A*
+solved the maze in - 184 moves with fog of war using Adaptive A*
+Maze 50 can solved with the path: in 99 steps without fog of war
+solved the maze in - 134 moves with fog of war using Repeated Forward A*
+solved the maze in - 150 moves with fog of war using Adaptive A*
+Maze 51 can solved with the path: in 101 steps without fog of war
+solved the maze in - 152 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Maze 52 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 160 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 376 moves
+Goal unreachable after 357 moves
+Goal is blocked by cells
+Goal unreachable after 12 moves
+Goal unreachable after 12 moves
+Goal is blocked by cells
+Goal unreachable after 186 moves
+Goal unreachable after 186 moves
+Goal is blocked by cells
+Goal unreachable after 301 moves
+Goal unreachable after 305 moves
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Maze 58 can solved with the path: in 101 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 174 moves with fog of war using Adaptive A*
+Maze 59 can solved with the path: in 101 steps without fog of war
+solved the maze in - 218 moves with fog of war using Repeated Forward A*
+solved the maze in - 218 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 200 moves
+Goal unreachable after 200 moves
+Maze 61 can solved with the path: in 99 steps without fog of war
+solved the maze in - 182 moves with fog of war using Repeated Forward A*
+solved the maze in - 182 moves with fog of war using Adaptive A*
+Maze 62 can solved with the path: in 99 steps without fog of war
+solved the maze in - 168 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 309 moves
+Goal unreachable after 309 moves
+Goal is blocked by cells
+Goal unreachable after 190 moves
+Goal unreachable after 190 moves
+Maze 65 can solved with the path: in 103 steps without fog of war
+solved the maze in - 248 moves with fog of war using Repeated Forward A*
+solved the maze in - 250 moves with fog of war using Adaptive A*
+Maze 66 can solved with the path: in 101 steps without fog of war
+solved the maze in - 170 moves with fog of war using Repeated Forward A*
+solved the maze in - 232 moves with fog of war using Adaptive A*
+Maze 67 can solved with the path: in 99 steps without fog of war
+solved the maze in - 162 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Maze 68 can solved with the path: in 101 steps without fog of war
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+solved the maze in - 178 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 16 moves
+Goal unreachable after 16 moves
+Maze 70 can solved with the path: in 103 steps without fog of war
+solved the maze in - 170 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 208 moves
+Goal unreachable after 208 moves
+Maze 72 can solved with the path: in 109 steps without fog of war
+solved the maze in - 186 moves with fog of war using Repeated Forward A*
+solved the maze in - 186 moves with fog of war using Adaptive A*
+Maze 73 can solved with the path: in 109 steps without fog of war
+solved the maze in - 234 moves with fog of war using Repeated Forward A*
+solved the maze in - 234 moves with fog of war using Adaptive A*
+Maze 74 can solved with the path: in 99 steps without fog of war
+solved the maze in - 148 moves with fog of war using Repeated Forward A*
+solved the maze in - 148 moves with fog of war using Adaptive A*
+Maze 75 can solved with the path: in 103 steps without fog of war
+solved the maze in - 176 moves with fog of war using Repeated Forward A*
+solved the maze in - 176 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 44 moves
+Goal unreachable after 40 moves
+Maze 77 can solved with the path: in 101 steps without fog of war
+solved the maze in - 226 moves with fog of war using Repeated Forward A*
+solved the maze in - 206 moves with fog of war using Adaptive A*
+Maze 78 can solved with the path: in 101 steps without fog of war
+solved the maze in - 228 moves with fog of war using Repeated Forward A*
+solved the maze in - 228 moves with fog of war using Adaptive A*
+Maze 79 can solved with the path: in 105 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 190 moves with fog of war using Adaptive A*
+Maze 80 can solved with the path: in 101 steps without fog of war
+solved the maze in - 182 moves with fog of war using Repeated Forward A*
+solved the maze in - 182 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 188 moves
+Goal unreachable after 192 moves
+Goal is blocked by cells
+Goal unreachable after 5 moves
+Goal unreachable after 5 moves
+Maze 83 can solved with the path: in 101 steps without fog of war
+solved the maze in - 186 moves with fog of war using Repeated Forward A*
+solved the maze in - 186 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 38 moves
+Goal unreachable after 38 moves
+Maze 85 can solved with the path: in 109 steps without fog of war
+solved the maze in - 220 moves with fog of war using Repeated Forward A*
+solved the maze in - 220 moves with fog of war using Adaptive A*
+Maze 86 can solved with the path: in 99 steps without fog of war
+solved the maze in - 176 moves with fog of war using Repeated Forward A*
+solved the maze in - 176 moves with fog of war using Adaptive A*
+Maze 87 can solved with the path: in 99 steps without fog of war
+solved the maze in - 184 moves with fog of war using Repeated Forward A*
+solved the maze in - 178 moves with fog of war using Adaptive A*
+Maze 88 can solved with the path: in 99 steps without fog of war
+solved the maze in - 216 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 150 moves
+Goal unreachable after 150 moves
+Goal is blocked by cells
+Goal unreachable after 135 moves
+Goal unreachable after 135 moves
+Goal is blocked by cells
+Goal unreachable after 11 moves
+Goal unreachable after 11 moves
+Maze 92 can solved with the path: in 101 steps without fog of war
+solved the maze in - 150 moves with fog of war using Repeated Forward A*
+solved the maze in - 150 moves with fog of war using Adaptive A*
+Maze 93 can solved with the path: in 99 steps without fog of war
+solved the maze in - 202 moves with fog of war using Repeated Forward A*
+solved the maze in - 198 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 21 moves
+Goal unreachable after 21 moves
+Maze 95 can solved with the path: in 99 steps without fog of war
+solved the maze in - 210 moves with fog of war using Repeated Forward A*
+solved the maze in - 210 moves with fog of war using Adaptive A*
+Maze 96 can solved with the path: in 99 steps without fog of war
+solved the maze in - 164 moves with fog of war using Repeated Forward A*
+solved the maze in - 164 moves with fog of war using Adaptive A*
+Maze 97 can solved with the path: in 99 steps without fog of war
+solved the maze in - 248 moves with fog of war using Repeated Forward A*
+solved the maze in - 224 moves with fog of war using Adaptive A*
+Maze 98 can solved with the path: in 99 steps without fog of war
+solved the maze in - 218 moves with fog of war using Repeated Forward A*
+solved the maze in - 220 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 15 moves
+Goal unreachable after 15 moves
+I solved 58 mazes and the other 42 were blocked
+agent 1 took 107.34 moves on average
+agent 2 took 107.96 moves on average
+Adaptive A* expanded 5.64504554813019 percent less cells than forward A* on average
+Adaptive A* took 13.284028412085291 percent less time than forward A* on average
+Maze 0 can solved with the path: in 101 steps without fog of war
+solved the maze in - 214 moves with fog of war using Repeated Forward A*
+solved the maze in - 212 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 55 moves
+Goal unreachable after 51 moves
+Maze 2 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 150 moves with fog of war using Adaptive A*
+Maze 3 can solved with the path: in 99 steps without fog of war
+solved the maze in - 300 moves with fog of war using Repeated Forward A*
+solved the maze in - 300 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 188 moves
+Goal unreachable after 188 moves
+Maze 5 can solved with the path: in 99 steps without fog of war
+solved the maze in - 200 moves with fog of war using Repeated Forward A*
+solved the maze in - 202 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 162 moves
+Goal unreachable after 172 moves
+Goal is blocked by cells
+Goal unreachable after 188 moves
+Goal unreachable after 188 moves
+Maze 8 can solved with the path: in 99 steps without fog of war
+solved the maze in - 204 moves with fog of war using Repeated Forward A*
+solved the maze in - 202 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 267 moves
+Goal unreachable after 269 moves
+Maze 10 can solved with the path: in 99 steps without fog of war
+solved the maze in - 172 moves with fog of war using Repeated Forward A*
+solved the maze in - 172 moves with fog of war using Adaptive A*
+Maze 11 can solved with the path: in 101 steps without fog of war
+solved the maze in - 168 moves with fog of war using Repeated Forward A*
+solved the maze in - 168 moves with fog of war using Adaptive A*
+Maze 12 can solved with the path: in 105 steps without fog of war
+solved the maze in - 244 moves with fog of war using Repeated Forward A*
+solved the maze in - 242 moves with fog of war using Adaptive A*
+Maze 13 can solved with the path: in 101 steps without fog of war
+solved the maze in - 166 moves with fog of war using Repeated Forward A*
+solved the maze in - 166 moves with fog of war using Adaptive A*
+Maze 14 can solved with the path: in 99 steps without fog of war
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+solved the maze in - 236 moves with fog of war using Adaptive A*
+Maze 15 can solved with the path: in 101 steps without fog of war
+solved the maze in - 142 moves with fog of war using Repeated Forward A*
+solved the maze in - 142 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 254 moves
+Goal unreachable after 254 moves
+Maze 17 can solved with the path: in 99 steps without fog of war
+solved the maze in - 128 moves with fog of war using Repeated Forward A*
+solved the maze in - 128 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 13 moves
+Goal unreachable after 13 moves
+Goal is blocked by cells
+Goal unreachable after 224 moves
+Goal unreachable after 264 moves
+Maze 20 can solved with the path: in 101 steps without fog of war
+solved the maze in - 174 moves with fog of war using Repeated Forward A*
+solved the maze in - 174 moves with fog of war using Adaptive A*
+Maze 21 can solved with the path: in 99 steps without fog of war
+solved the maze in - 134 moves with fog of war using Repeated Forward A*
+solved the maze in - 134 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 142 moves
+Goal unreachable after 142 moves
+Maze 23 can solved with the path: in 101 steps without fog of war
+solved the maze in - 244 moves with fog of war using Repeated Forward A*
+solved the maze in - 216 moves with fog of war using Adaptive A*
+Maze 24 can solved with the path: in 103 steps without fog of war
+solved the maze in - 168 moves with fog of war using Repeated Forward A*
+solved the maze in - 168 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 169 moves
+Goal unreachable after 181 moves
+Maze 26 can solved with the path: in 99 steps without fog of war
+solved the maze in - 194 moves with fog of war using Repeated Forward A*
+solved the maze in - 194 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 142 moves
+Goal unreachable after 142 moves
+Goal is blocked by cells
+Goal unreachable after 198 moves
+Goal unreachable after 198 moves
+Maze 29 can solved with the path: in 99 steps without fog of war
+solved the maze in - 156 moves with fog of war using Repeated Forward A*
+solved the maze in - 150 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Maze 31 can solved with the path: in 99 steps without fog of war
+solved the maze in - 210 moves with fog of war using Repeated Forward A*
+solved the maze in - 212 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 304 moves
+Goal unreachable after 300 moves
+Maze 33 can solved with the path: in 99 steps without fog of war
+solved the maze in - 164 moves with fog of war using Repeated Forward A*
+solved the maze in - 164 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 184 moves
+Goal unreachable after 184 moves
+Maze 35 can solved with the path: in 99 steps without fog of war
+solved the maze in - 142 moves with fog of war using Repeated Forward A*
+solved the maze in - 154 moves with fog of war using Adaptive A*
+Maze 36 can solved with the path: in 99 steps without fog of war
+solved the maze in - 184 moves with fog of war using Repeated Forward A*
+solved the maze in - 184 moves with fog of war using Adaptive A*
+Maze 37 can solved with the path: in 99 steps without fog of war
+solved the maze in - 162 moves with fog of war using Repeated Forward A*
+solved the maze in - 162 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 4 moves
+Goal unreachable after 4 moves
+Maze 39 can solved with the path: in 107 steps without fog of war
+solved the maze in - 326 moves with fog of war using Repeated Forward A*
+solved the maze in - 326 moves with fog of war using Adaptive A*
+Maze 40 can solved with the path: in 101 steps without fog of war
+solved the maze in - 148 moves with fog of war using Repeated Forward A*
+solved the maze in - 146 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 225 moves
+Goal unreachable after 225 moves
+Maze 42 can solved with the path: in 101 steps without fog of war
+solved the maze in - 282 moves with fog of war using Repeated Forward A*
+solved the maze in - 218 moves with fog of war using Adaptive A*
+Maze 43 can solved with the path: in 99 steps without fog of war
+solved the maze in - 120 moves with fog of war using Repeated Forward A*
+solved the maze in - 120 moves with fog of war using Adaptive A*
+Maze 44 can solved with the path: in 99 steps without fog of war
+solved the maze in - 226 moves with fog of war using Repeated Forward A*
+solved the maze in - 222 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 312 moves
+Goal unreachable after 330 moves
+Goal is blocked by cells
+Goal unreachable after 126 moves
+Goal unreachable after 154 moves
+Goal is blocked by cells
+Goal unreachable after 213 moves
+Goal unreachable after 213 moves
+Maze 48 can solved with the path: in 99 steps without fog of war
+solved the maze in - 198 moves with fog of war using Repeated Forward A*
+solved the maze in - 198 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 7 moves
+Goal unreachable after 7 moves
+Maze 50 can solved with the path: in 99 steps without fog of war
+solved the maze in - 250 moves with fog of war using Repeated Forward A*
+solved the maze in - 254 moves with fog of war using Adaptive A*
+Maze 51 can solved with the path: in 101 steps without fog of war
+solved the maze in - 152 moves with fog of war using Repeated Forward A*
+solved the maze in - 152 moves with fog of war using Adaptive A*
+Maze 52 can solved with the path: in 101 steps without fog of war
+solved the maze in - 190 moves with fog of war using Repeated Forward A*
+solved the maze in - 190 moves with fog of war using Adaptive A*
+Maze 53 can solved with the path: in 103 steps without fog of war
+solved the maze in - 134 moves with fog of war using Repeated Forward A*
+solved the maze in - 134 moves with fog of war using Adaptive A*
+Maze 54 can solved with the path: in 99 steps without fog of war
+solved the maze in - 164 moves with fog of war using Repeated Forward A*
+solved the maze in - 164 moves with fog of war using Adaptive A*
+Maze 55 can solved with the path: in 101 steps without fog of war
+solved the maze in - 176 moves with fog of war using Repeated Forward A*
+solved the maze in - 176 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 185 moves
+Goal unreachable after 183 moves
+Maze 57 can solved with the path: in 101 steps without fog of war
+solved the maze in - 172 moves with fog of war using Repeated Forward A*
+solved the maze in - 172 moves with fog of war using Adaptive A*
+Maze 58 can solved with the path: in 101 steps without fog of war
+solved the maze in - 166 moves with fog of war using Repeated Forward A*
+solved the maze in - 166 moves with fog of war using Adaptive A*
+Maze 59 can solved with the path: in 103 steps without fog of war
+solved the maze in - 218 moves with fog of war using Repeated Forward A*
+solved the maze in - 218 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 190 moves
+Goal unreachable after 190 moves
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Maze 62 can solved with the path: in 99 steps without fog of war
+solved the maze in - 206 moves with fog of war using Repeated Forward A*
+solved the maze in - 206 moves with fog of war using Adaptive A*
+Maze 63 can solved with the path: in 101 steps without fog of war
+solved the maze in - 148 moves with fog of war using Repeated Forward A*
+solved the maze in - 148 moves with fog of war using Adaptive A*
+Maze 64 can solved with the path: in 99 steps without fog of war
+solved the maze in - 126 moves with fog of war using Repeated Forward A*
+solved the maze in - 124 moves with fog of war using Adaptive A*
+Maze 65 can solved with the path: in 99 steps without fog of war
+solved the maze in - 160 moves with fog of war using Repeated Forward A*
+solved the maze in - 160 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 163 moves
+Goal unreachable after 163 moves
+Goal is blocked by cells
+Goal unreachable after 30 moves
+Goal unreachable after 30 moves
+Goal is blocked by cells
+Goal unreachable after 3 moves
+Goal unreachable after 3 moves
+Goal is blocked by cells
+Goal unreachable after 220 moves
+Goal unreachable after 220 moves
+Goal is blocked by cells
+Goal unreachable after 13 moves
+Goal unreachable after 13 moves
+Maze 71 can solved with the path: in 99 steps without fog of war
+solved the maze in - 216 moves with fog of war using Repeated Forward A*
+solved the maze in - 212 moves with fog of war using Adaptive A*
+Maze 72 can solved with the path: in 103 steps without fog of war
+solved the maze in - 156 moves with fog of war using Repeated Forward A*
+solved the maze in - 158 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 4 moves
+Goal unreachable after 4 moves
+Maze 74 can solved with the path: in 111 steps without fog of war
+solved the maze in - 146 moves with fog of war using Repeated Forward A*
+solved the maze in - 144 moves with fog of war using Adaptive A*
+Maze 75 can solved with the path: in 99 steps without fog of war
+solved the maze in - 186 moves with fog of war using Repeated Forward A*
+solved the maze in - 184 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 192 moves
+Goal unreachable after 192 moves
+Maze 77 can solved with the path: in 99 steps without fog of war
+solved the maze in - 190 moves with fog of war using Repeated Forward A*
+solved the maze in - 190 moves with fog of war using Adaptive A*
+Maze 78 can solved with the path: in 99 steps without fog of war
+solved the maze in - 196 moves with fog of war using Repeated Forward A*
+solved the maze in - 198 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 18 moves
+Goal unreachable after 18 moves
+Maze 80 can solved with the path: in 99 steps without fog of war
+solved the maze in - 144 moves with fog of war using Repeated Forward A*
+solved the maze in - 144 moves with fog of war using Adaptive A*
+Maze 81 can solved with the path: in 107 steps without fog of war
+solved the maze in - 170 moves with fog of war using Repeated Forward A*
+solved the maze in - 170 moves with fog of war using Adaptive A*
+Maze 82 can solved with the path: in 101 steps without fog of war
+solved the maze in - 168 moves with fog of war using Repeated Forward A*
+solved the maze in - 168 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 17 moves
+Goal unreachable after 17 moves
+Goal is blocked by cells
+Goal unreachable after 9 moves
+Goal unreachable after 9 moves
+Goal is blocked by cells
+Goal unreachable after 127 moves
+Goal unreachable after 123 moves
+Maze 86 can solved with the path: in 101 steps without fog of war
+solved the maze in - 144 moves with fog of war using Repeated Forward A*
+solved the maze in - 166 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 6 moves
+Goal unreachable after 6 moves
+Maze 88 can solved with the path: in 103 steps without fog of war
+solved the maze in - 146 moves with fog of war using Repeated Forward A*
+solved the maze in - 146 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 6 moves
+Goal unreachable after 6 moves
+Maze 90 can solved with the path: in 101 steps without fog of war
+solved the maze in - 168 moves with fog of war using Repeated Forward A*
+solved the maze in - 168 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 188 moves
+Goal unreachable after 190 moves
+Maze 92 can solved with the path: in 109 steps without fog of war
+solved the maze in - 236 moves with fog of war using Repeated Forward A*
+solved the maze in - 236 moves with fog of war using Adaptive A*
+Maze 93 can solved with the path: in 99 steps without fog of war
+solved the maze in - 154 moves with fog of war using Repeated Forward A*
+solved the maze in - 154 moves with fog of war using Adaptive A*
+Maze 94 can solved with the path: in 99 steps without fog of war
+solved the maze in - 180 moves with fog of war using Repeated Forward A*
+solved the maze in - 180 moves with fog of war using Adaptive A*
+Maze 95 can solved with the path: in 99 steps without fog of war
+solved the maze in - 262 moves with fog of war using Repeated Forward A*
+solved the maze in - 262 moves with fog of war using Adaptive A*
+Goal is blocked by cells
+Goal unreachable after 21 moves
+Goal unreachable after 21 moves
+Maze 97 can solved with the path: in 99 steps without fog of war
+solved the maze in - 202 moves with fog of war using Repeated Forward A*
+solved the maze in - 202 moves with fog of war using Adaptive A*
+Maze 98 can solved with the path: in 101 steps without fog of war
+solved the maze in - 214 moves with fog of war using Repeated Forward A*
+solved the maze in - 212 moves with fog of war using Adaptive A*
+Maze 99 can solved with the path: in 105 steps without fog of war
+solved the maze in - 220 moves with fog of war using Repeated Forward A*
+solved the maze in - 220 moves with fog of war using Adaptive A*
+I solved 61 mazes and the other 39 were blocked
+agent 1 took 112.68 moves on average
+agent 2 took 112.4 moves on average
+Adaptive A* expanded 2.477925437635131 percent less cells than forward A* on average
+Adaptive A* took 0.06465141461616808 percent less time than forward A* on average
