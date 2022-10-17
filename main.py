@@ -13,6 +13,7 @@ import logging
 from datetime import datetime
 import imageio
 import os
+import minHeap
 class Cell:
 
     def __init__(self, coordinates=None, parentCell=None):
@@ -38,6 +39,10 @@ class Cell:
             if (self.gval > other.gval):
                 return 1
         return 0
+    def __gt__(self,other):
+        if (self.fval > other.fval):
+            return 1
+
 
 
 class Maze:
@@ -193,6 +198,7 @@ def AstarSearch(start, goal, maze : Maze):
     #create a priority queue for the open list
 
     openList = PriorityQueue()
+    # openList = minHeap.minHeap()
     closedList = []
     openList.put(startCell)
     AdjacentRowIndex = [0, 1, 0, -1]
@@ -236,6 +242,7 @@ def AstarSearch(start, goal, maze : Maze):
             neighbour.hval = abs(goalCell.coordinates[0] - neighbour.coordinates[0]) + abs(goalCell.coordinates[1] - neighbour.coordinates[1])
             neighbour.fval = neighbour.gval + neighbour.hval
             for openNeighbour in openList.queue:
+            # for openNeighbour in openList.heap:
                 if neighbour.coordinates == openNeighbour.coordinates and neighbour.gval >= openNeighbour.gval:
                     weakerNeighbour = 1
                     break
