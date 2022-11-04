@@ -61,22 +61,22 @@ class minHeap():
             return True
         return False
 
-# if __name__ == "__main__":
-#     heap = minHeap()
-#     start = (0,0)
-#     startcell = main.Cell(start, None)
-#     startcell.fval = startcell.gval = 1001
-#     heap.put(startcell)
-#     i = 1000
-#     newCell = startcell
-#     while(i>0):
-#         newCell = main.Cell(start, newCell)
-#         newCell.fval = newCell.gval = i
-#         heap.put(newCell)
-#         i-=1
-#     while(not heap.empty()):
-#         cell = heap.get()
-#         print(cell.fval)
+if __name__ == "__main__":
+    heap = minHeap()
+    start = (0,0)
+    startcell = main.Cell(start, None)
+    startcell.fval = startcell.gval = 1001
+    heap.put(startcell)
+    i = 1000
+    newCell = startcell
+    while(i>0):
+        newCell = main.Cell(start, newCell)
+        newCell.fval = newCell.gval = i
+        heap.put(newCell)
+        i-=1
+    while(not heap.empty()):
+        cell = heap.get()
+        print(cell.fval)
 
     
 

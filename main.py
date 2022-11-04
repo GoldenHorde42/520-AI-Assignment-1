@@ -1,3 +1,4 @@
+#By Goutham Swaminathan, Simran Singh and Faraz Ahmed
 from array import *
 from re import S
 from typing import Dict
@@ -391,7 +392,6 @@ if __name__ == "__main__":
     logging.basicConfig(filename='ForwardvsBackward_.txt', level=logging.INFO, format='')
     # maze1 = Maze(50,50)
     # maze1.generate_maze()
-    
     # maze1.clearVisitedArray()
     # maze1.maze[24][24] = 0
     # maze1.maze = [[0,0,0,0,0],[0,0,1,0,0],[0,0,1,1,0],[0,0,1,1,0],[0,0,0,1,0]]
@@ -421,7 +421,7 @@ if __name__ == "__main__":
     starttime = time.time()
     while(agent1.position != goal):
         iterations += 1
-        agentPath,expandedCells = agent1.findForwardPath()
+        agentPath,expandedCells = agent1.findBackwardPath()
         agent1.gridworld.visualize_maze()
         TotalExpandedCells += expandedCells
         if agentPath == 1:
@@ -430,7 +430,7 @@ if __name__ == "__main__":
             break
         reversedAgentPath = agentPath[::-1]
         #use reversed agent path for Backward A*
-        agent1.makeMoves(maze1,agentPath)
+        agent1.makeMoves(maze1,reversedAgentPath)
 
     endtime = time.time()
     ConvertToGif("repeatedForward")
@@ -470,7 +470,7 @@ if __name__ == "__main__":
     
 
 
-    #Uncomment the code below and comment the code above to test adaptive and repeated forward A* for 100 random mazes
+    #Uncomment the code below and comment the code above to test adaptive and repeated forward A* for 500 random mazes
 
 
 
@@ -486,10 +486,21 @@ if __name__ == "__main__":
     # timeTakenForward = 0
     # timeTakenAdaptive = 0
     # logging.basicConfig(filename='AdaptiveAstar_2.txt', level=logging.DEBUG, format='')
-    # for i in range(100):
+    # ub = 0
+    # for i in range(500):
         
     #     maze = Maze(50,50)
     #     maze.generate_maze()
+    #     m = 0
+    #     n = 0
+    #     for i in range(maze.rows):
+    #         for j in range(maze.columns):
+    #             if maze.maze[i][j] == 0:
+    #                 m+=1
+    #             else:
+    #                 n+=1
+    #     logging.info(f"Ratio of unblocked cells to total cells = {m/(m+n)}")
+    #     logging.info(f"Number of unblocked cells = {m}")
     #     maze.clearVisitedArray()
     #     path,steps,notGoal,expandedCells = AstarSearch(start,goal,maze)
     #     if(not notGoal):
@@ -509,6 +520,10 @@ if __name__ == "__main__":
     #         #print(agentPath)
     #         if agentPath == 1:
     #             logging.info(f"Goal unreachable after {agent1.moves} moves")
+    #             if agent1.moves <= (m*m):
+    #                 logging.info(f"Number of agent moves is = {agent1.moves} and this is less than the number off unblocked cells squared, which is = {m*m}")
+    #             else:
+    #                 ub+=1
     #             blocked+=1
     #             break
     #         reversedAgentPath = agentPath[::-1]
@@ -546,6 +561,7 @@ if __name__ == "__main__":
     #     TotalAdaptiveExpandedCells += TotalAexpandedCells
     # logging.info(f"I solved {solved} mazes and the other {blocked} were blocked")
     # logging.info(f"agent 1 took {agent1moves/100} moves on average")
+    # logging.info(f"Of the {blocked} blocked mazes, the number of moves by agent 1 were greater than the number of unblocked cells squared {ub} times.")
     # logging.info(f"agent 2 took {agent2moves/100} moves on average")
     # i = (1 - (TotalAdaptiveExpandedCells/TotalForwardExpandedCells)) * 100
     # logging.info(f"Adaptive A* expanded {i} percent less cells than forward A* on average")

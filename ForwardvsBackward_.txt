@@ -35,3 +35,87 @@ solved the maze in - 178 moves with fog of war using Repeated Forward A*
 solved the maze in - 178 moves with fog of war using Adaptive A*
 3279
 47.885732650756836
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+17.43978261947632
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+46.617438316345215
+Goal unreachable after 0 moves
+5
+0.04089236259460449
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+16.669497966766357
+Goal unreachable after 0 moves
+5
+0.03990483283996582
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+17.654311895370483
+Goal unreachable after 0 moves
+5
+0.043883323669433594
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+17.738373279571533
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+17.333133220672607
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+46.97258138656616
+Goal unreachable after 0 moves
+5
+0.042885780334472656
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+17.91735053062439
+Goal unreachable after 0 moves
+5
+0.03989291191101074
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+17.845232486724854
+Goal unreachable after 0 moves
+5
+0.038895606994628906
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+17.85408878326416
+Goal unreachable after 0 moves
+5
+0.0468754768371582
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+17.82430863380432
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+17.399856090545654
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+46.97956085205078
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+18.090490341186523
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+48.330360889434814
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+17.629560470581055
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+48.636836528778076
+solved the maze in - 178 moves with fog of war using Repeated Forward A*
+3326
+16.871644020080566
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+44.710870027542114
+solved the maze in - 180 moves with fog of war using Repeated Forward A*
+16513
+32.01111054420471
+solved the maze in - 178 moves with fog of war using Adaptive A*
+3279
+60.186477184295654
